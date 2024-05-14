@@ -36,8 +36,8 @@ public class Editora {
 	@Column(name = "imagem_url")
 	private String imagemUrl;
 
-//	@OneToMany(mappedBy = "editora")
-//	private List<Livro> livros;
+	@OneToMany(mappedBy = "editora")
+	private List<Livro> livros;
 
 	public Integer getEditoraId() {
 		return editoraId;
