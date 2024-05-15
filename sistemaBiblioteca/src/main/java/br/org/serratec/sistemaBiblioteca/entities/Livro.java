@@ -18,6 +18,7 @@ import jakarta.persistence.Table;
 public class Livro {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "livro_id")
 	private Integer livroId;
 	
 	@Column(name = "nome_livro")
@@ -29,7 +30,7 @@ public class Livro {
 	@Column(name = "codigo_isbn")
 	private Integer codigoIsbn;
 	
-	@OneToMany(mappedBy = "emprestimo_id")
+	@OneToMany(mappedBy = "livro")
 	private List<Emprestimo> emprestimos;
 	
 	@ManyToOne

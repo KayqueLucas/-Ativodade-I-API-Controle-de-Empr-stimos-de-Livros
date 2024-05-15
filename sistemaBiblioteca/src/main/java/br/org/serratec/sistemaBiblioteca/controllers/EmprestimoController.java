@@ -18,7 +18,7 @@ import br.org.serratec.sistemaBiblioteca.entities.Emprestimo;
 import br.org.serratec.sistemaBiblioteca.services.EmprestimoService;
 
 @RestController
-@RequestMapping("/perfis")
+@RequestMapping("/emprestimos")
 public class EmprestimoController {
 
 	@Autowired
