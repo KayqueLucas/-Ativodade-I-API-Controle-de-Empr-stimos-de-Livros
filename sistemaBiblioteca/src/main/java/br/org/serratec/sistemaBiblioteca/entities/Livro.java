@@ -1,6 +1,7 @@
 package br.org.serratec.sistemaBiblioteca.entities;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,12 +16,10 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "livro")
 public class Livro {
-	//Preciso colocar o livro_Id? Aonde?
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer livroId;
 	
-	//Atributos - o que é int4?
 	@Column(name = "nome_livro")
 	private String nomeLivro;
 	@Column(name = "nome_autor")
@@ -30,7 +29,6 @@ public class Livro {
 	@Column(name = "codigo_isbn")
 	private Integer codigoIsbn;
 	
-	//Relaçoes
 	@OneToMany(mappedBy = "emprestimo_id")
 	private List<Emprestimo> emprestimos;
 	
