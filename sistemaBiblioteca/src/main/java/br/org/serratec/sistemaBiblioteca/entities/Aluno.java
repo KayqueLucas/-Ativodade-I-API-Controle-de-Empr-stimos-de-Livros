@@ -1,5 +1,7 @@
 package br.org.serratec.sistemaBiblioteca.entities;
 
+
+import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
@@ -26,7 +28,7 @@ public class Aluno {
 	private String nome;
 
 	@Column(name = "dat_anascimento")
-	private String dataNascimento;
+	private Date dataNascimento;
 
 	@Column(name = "cpf ", unique = true)
 	private String cpf;
@@ -64,12 +66,15 @@ public class Aluno {
 	}
 
 
-	public String getDataNascimento() {
+	
+
+
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
 
 
-	public void setDataNascimento(String dataNascimento) {
+	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 

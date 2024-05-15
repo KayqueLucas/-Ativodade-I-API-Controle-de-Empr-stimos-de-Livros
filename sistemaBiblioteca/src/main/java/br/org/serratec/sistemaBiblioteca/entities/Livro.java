@@ -1,6 +1,6 @@
 package br.org.serratec.sistemaBiblioteca.entities;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -20,24 +20,24 @@ public class Livro {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "livro_id")
 	private Integer livroId;
-	
+
 	@Column(name = "nome_livro")
 	private String nomeLivro;
 	@Column(name = "nome_autor")
 	private String nomeAutor;
 	@Column(name = "data_lancamento")
-	private Date dataLancamento ;
+	private Date dataLancamento;
 	@Column(name = "codigo_isbn")
 	private Integer codigoIsbn;
-	
+
 	@OneToMany(mappedBy = "livro")
 	private List<Emprestimo> emprestimos;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "editora_id")
 	private Editora editora;
-	
-	//Getters e Setters
+
+	// Getters e Setters
 	public List<Emprestimo> getEmprestimos() {
 		return emprestimos;
 	}
@@ -93,9 +93,5 @@ public class Livro {
 	public void setEmprestimos(List<Emprestimo> emprestimos) {
 		this.emprestimos = emprestimos;
 	}
-
-	
-	
-	
 
 }

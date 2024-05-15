@@ -1,6 +1,6 @@
 package br.org.serratec.sistemaBiblioteca.entities;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -32,10 +32,10 @@ public class Emprestimo {
 	private Livro livro;
 
 	@Column(name = "data_emprestimo")
-	private LocalDate dataEmprestimo;
+	private Date dataEmprestimo;
 
 	@Column(name = "data_entrega")
-	private LocalDate dataEntrega;
+	private Date dataEntrega;
 
 	@Column(name = "valor_emprestimo")
 	private double valorEmprestimo;
@@ -64,19 +64,19 @@ public class Emprestimo {
 		this.livro = livro;
 	}
 
-	public LocalDate getDataEmprestimo() {
+	public Date getDataEmprestimo() {
 		return dataEmprestimo;
 	}
 
-	public void setDataEmprestimo(LocalDate dataEmprestimo) {
+	public void setDataEmprestimo(Date dataEmprestimo) {
 		this.dataEmprestimo = dataEmprestimo;
 	}
 
-	public LocalDate getDataEntrega() {
+	public Date getDataEntrega() {
 		return dataEntrega;
 	}
 
-	public void setDataEntrega(LocalDate dataEntrega) {
+	public void setDataEntrega(Date dataEntrega) {
 		this.dataEntrega = dataEntrega;
 	}
 
